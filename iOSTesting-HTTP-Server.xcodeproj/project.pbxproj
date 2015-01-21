@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7C207245D368BE3009EFC9D /* libPods-iOSTesting-HTTP-Server.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D61421E50F661E9E9188797 /* libPods-iOSTesting-HTTP-Server.a */; };
+		C84D74A11A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C84D74A01A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.h */; };
+		C84D74A31A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.m in Sources */ = {isa = PBXBuildFile; fileRef = C84D74A21A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.m */; };
+		C84D74A91A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C84D749D1A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C84D74AA1A6FC7B100CF71C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C84D74951A6FC7B100CF71C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C84D749C1A6FC7B100CF71C8;
+			remoteInfo = "iOSTesting-HTTP-Server";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C84D749B1A6FC7B100CF71C8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				C84D74A11A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7D61421E50F661E9E9188797 /* libPods-iOSTesting-HTTP-Server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSTesting-HTTP-Server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5557D0265CAEAB0D517E653 /* Pods-iOSTesting-HTTP-Server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTesting-HTTP-Server.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTesting-HTTP-Server/Pods-iOSTesting-HTTP-Server.debug.xcconfig"; sourceTree = "<group>"; };
+		C84D749D1A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOSTesting-HTTP-Server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84D74A01A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSTesting_HTTP_Server.h; sourceTree = "<group>"; };
+		C84D74A21A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSTesting_HTTP_Server.m; sourceTree = "<group>"; };
+		C84D74A81A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOSTesting-HTTP-ServerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84D74AE1A6FC7B100CF71C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C5583E13775C19E1758741 /* Pods-iOSTesting-HTTP-Server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTesting-HTTP-Server.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTesting-HTTP-Server/Pods-iOSTesting-HTTP-Server.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C84D749A1A6FC7B100CF71C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C207245D368BE3009EFC9D /* libPods-iOSTesting-HTTP-Server.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84D74A51A6FC7B100CF71C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84D74A91A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FE60988CF5E3ACE3F62205A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D61421E50F661E9E9188797 /* libPods-iOSTesting-HTTP-Server.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B507156FC771293BA9DDEAFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5557D0265CAEAB0D517E653 /* Pods-iOSTesting-HTTP-Server.debug.xcconfig */,
+				F3C5583E13775C19E1758741 /* Pods-iOSTesting-HTTP-Server.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C84D74941A6FC7B100CF71C8 = {
+			isa = PBXGroup;
+			children = (
+				C84D749F1A6FC7B100CF71C8 /* iOSTesting-HTTP-Server */,
+				C84D74AC1A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests */,
+				C84D749E1A6FC7B100CF71C8 /* Products */,
+				B507156FC771293BA9DDEAFE /* Pods */,
+				9FE60988CF5E3ACE3F62205A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C84D749E1A6FC7B100CF71C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C84D749D1A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a */,
+				C84D74A81A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C84D749F1A6FC7B100CF71C8 /* iOSTesting-HTTP-Server */ = {
+			isa = PBXGroup;
+			children = (
+				C84D74A01A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.h */,
+				C84D74A21A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.m */,
+			);
+			path = "iOSTesting-HTTP-Server";
+			sourceTree = "<group>";
+		};
+		C84D74AC1A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C84D74AD1A6FC7B100CF71C8 /* Supporting Files */,
+			);
+			path = "iOSTesting-HTTP-ServerTests";
+			sourceTree = "<group>";
+		};
+		C84D74AD1A6FC7B100CF71C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C84D74AE1A6FC7B100CF71C8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C84D749C1A6FC7B100CF71C8 /* iOSTesting-HTTP-Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C84D74B11A6FC7B100CF71C8 /* Build configuration list for PBXNativeTarget "iOSTesting-HTTP-Server" */;
+			buildPhases = (
+				8E7B5CB116A83054B09E7835 /* Check Pods Manifest.lock */,
+				C84D74991A6FC7B100CF71C8 /* Sources */,
+				C84D749A1A6FC7B100CF71C8 /* Frameworks */,
+				C84D749B1A6FC7B100CF71C8 /* CopyFiles */,
+				D7FCBA0C2E84F1F6DFAB272B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOSTesting-HTTP-Server";
+			productName = "iOSTesting-HTTP-Server";
+			productReference = C84D749D1A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C84D74A71A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C84D74B41A6FC7B100CF71C8 /* Build configuration list for PBXNativeTarget "iOSTesting-HTTP-ServerTests" */;
+			buildPhases = (
+				C84D74A41A6FC7B100CF71C8 /* Sources */,
+				C84D74A51A6FC7B100CF71C8 /* Frameworks */,
+				C84D74A61A6FC7B100CF71C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C84D74AB1A6FC7B100CF71C8 /* PBXTargetDependency */,
+			);
+			name = "iOSTesting-HTTP-ServerTests";
+			productName = "iOSTesting-HTTP-ServerTests";
+			productReference = C84D74A81A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C84D74951A6FC7B100CF71C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "VocaLink Holdings Limited";
+				TargetAttributes = {
+					C84D749C1A6FC7B100CF71C8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C84D74A71A6FC7B100CF71C8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = C84D74981A6FC7B100CF71C8 /* Build configuration list for PBXProject "iOSTesting-HTTP-Server" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C84D74941A6FC7B100CF71C8;
+			productRefGroup = C84D749E1A6FC7B100CF71C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C84D749C1A6FC7B100CF71C8 /* iOSTesting-HTTP-Server */,
+				C84D74A71A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C84D74A61A6FC7B100CF71C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E7B5CB116A83054B09E7835 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7FCBA0C2E84F1F6DFAB272B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSTesting-HTTP-Server/Pods-iOSTesting-HTTP-Server-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C84D74991A6FC7B100CF71C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84D74A31A6FC7B100CF71C8 /* iOSTesting_HTTP_Server.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84D74A41A6FC7B100CF71C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C84D74AB1A6FC7B100CF71C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C84D749C1A6FC7B100CF71C8 /* iOSTesting-HTTP-Server */;
+			targetProxy = C84D74AA1A6FC7B100CF71C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C84D74AF1A6FC7B100CF71C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C84D74B01A6FC7B100CF71C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C84D74B21A6FC7B100CF71C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5557D0265CAEAB0D517E653 /* Pods-iOSTesting-HTTP-Server.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C84D74B31A6FC7B100CF71C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3C5583E13775C19E1758741 /* Pods-iOSTesting-HTTP-Server.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C84D74B51A6FC7B100CF71C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOSTesting-HTTP-ServerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C84D74B61A6FC7B100CF71C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOSTesting-HTTP-ServerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C84D74981A6FC7B100CF71C8 /* Build configuration list for PBXProject "iOSTesting-HTTP-Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84D74AF1A6FC7B100CF71C8 /* Debug */,
+				C84D74B01A6FC7B100CF71C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C84D74B11A6FC7B100CF71C8 /* Build configuration list for PBXNativeTarget "iOSTesting-HTTP-Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84D74B21A6FC7B100CF71C8 /* Debug */,
+				C84D74B31A6FC7B100CF71C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C84D74B41A6FC7B100CF71C8 /* Build configuration list for PBXNativeTarget "iOSTesting-HTTP-ServerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84D74B51A6FC7B100CF71C8 /* Debug */,
+				C84D74B61A6FC7B100CF71C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C84D74951A6FC7B100CF71C8 /* Project object */;
+}
