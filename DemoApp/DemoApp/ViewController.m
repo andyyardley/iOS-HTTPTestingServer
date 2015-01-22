@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "iOSTesting-HTTP-Server.h"
+#import "iOSTestingHTTPServer.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
@@ -36,7 +36,7 @@
 
     self.go.enabled = (self.methodName.text.length > 0) ? YES : NO;
     
-    [LocalWebServer startLocalWebServer];
+    [iOSTestingHTTPServer startLocalWebServer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,8 +74,8 @@
 
 - (IBAction)go:(UIButton *)sender
 {
-    NSURL *aUrl = [LocalWebServer localWebServerURL];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:aUrl
+    NSURL *webServerURL = [iOSTestingHTTPServer localWebServerURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:webServerURL
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     

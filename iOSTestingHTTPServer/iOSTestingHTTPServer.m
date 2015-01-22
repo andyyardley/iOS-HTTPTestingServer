@@ -1,21 +1,21 @@
 //
-//  LocalWebServer.m
+//  iOSTesting-HTTP-Server.m
 //
 //  Created by Benjamin Whiting on 21/01/2015.
 //  Copyright (c) 2015 VocaLink Holdings Limited. All rights reserved.
 //
 
-#import "LocalWebServer.h"
+#import "iOSTestingHTTPServer.h"
 #import <UIKit/UIKit.h>
 #import "GCDWebServer.h"
 #import "GCDWebServerURLEncodedFormRequest.h"
 
-@interface LocalWebServer()
+@interface iOSTestingHTTPServer()
 
 @property (nonatomic, strong) GCDWebServer *webServer;
 @end
 
-@implementation LocalWebServer
+@implementation iOSTestingHTTPServer
 
 - (instancetype) init
 {
@@ -29,20 +29,20 @@
 
 + (instancetype) sharedInstance
 {
-    static LocalWebServer *sharedInstance = nil;
+    static iOSTestingHTTPServer *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken,
-    ^{
-        sharedInstance = [self new];
-    });
+                  ^{
+                      sharedInstance = [self new];
+                  });
     return sharedInstance;
 }
 
 + (void) startLocalWebServer
 {
-    [[LocalWebServer sharedInstance] startWebServer];
+    [[iOSTestingHTTPServer sharedInstance] startWebServer];
 }
-     
+
 - (void) startWebServer
 {
     [self addPOSTHandler];
@@ -79,14 +79,17 @@
         
         if([[UIApplication sharedApplication].delegate respondsToSelector:methodSelector])
         {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             [[UIApplication sharedApplication].delegate performSelector:methodSelector withObject:postArguments];
+#pragma clang diagnostic pop
         }
     }
 }
 
 + (NSURL *) localWebServerURL
 {
-    return [LocalWebServer sharedInstance].webServer.serverURL;
+    return [iOSTestingHTTPServer sharedInstance].webServer.serverURL;
     
 }
 

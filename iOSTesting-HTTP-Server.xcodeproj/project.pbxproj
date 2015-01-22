@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B7C207245D368BE3009EFC9D /* libPods-iOSTesting-HTTP-Server.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D61421E50F661E9E9188797 /* libPods-iOSTesting-HTTP-Server.a */; };
-		C84D74A11A6FC7B100CF71C8 /* LocalWebServer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C84D74A01A6FC7B100CF71C8 /* LocalWebServer.h */; };
-		C84D74A31A6FC7B100CF71C8 /* LocalWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C84D74A21A6FC7B100CF71C8 /* LocalWebServer.m */; };
 		C84D74A91A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C84D749D1A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a */; };
+		C88AC5DF1A716550007179E8 /* iOSTestingHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = C88AC5DE1A716550007179E8 /* iOSTestingHTTPServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +29,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				C84D74A11A6FC7B100CF71C8 /* LocalWebServer.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,12 +38,11 @@
 		7D61421E50F661E9E9188797 /* libPods-iOSTesting-HTTP-Server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSTesting-HTTP-Server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5557D0265CAEAB0D517E653 /* Pods-iOSTesting-HTTP-Server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTesting-HTTP-Server.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTesting-HTTP-Server/Pods-iOSTesting-HTTP-Server.debug.xcconfig"; sourceTree = "<group>"; };
 		C84D749D1A6FC7B100CF71C8 /* libiOSTesting-HTTP-Server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOSTesting-HTTP-Server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C84D74A01A6FC7B100CF71C8 /* LocalWebServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalWebServer.h; sourceTree = "<group>"; };
-		C84D74A21A6FC7B100CF71C8 /* LocalWebServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalWebServer.m; sourceTree = "<group>"; };
 		C84D74A81A6FC7B100CF71C8 /* iOSTesting-HTTP-ServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOSTesting-HTTP-ServerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84D74AE1A6FC7B100CF71C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C88AC5DB1A711006007179E8 /* iOSTesting-HTTP-Server.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOSTesting-HTTP-Server.podspec"; sourceTree = "<group>"; };
-		C88AC5DC1A7114B0007179E8 /* iOSTesting-HTTP-Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTesting-HTTP-Server.h"; sourceTree = "<group>"; };
+		C88AC5DD1A716550007179E8 /* iOSTestingHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iOSTestingHTTPServer.h; path = iOSTestingHTTPServer/iOSTestingHTTPServer.h; sourceTree = SOURCE_ROOT; };
+		C88AC5DE1A716550007179E8 /* iOSTestingHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iOSTestingHTTPServer.m; path = iOSTestingHTTPServer/iOSTestingHTTPServer.m; sourceTree = SOURCE_ROOT; };
 		F3C5583E13775C19E1758741 /* Pods-iOSTesting-HTTP-Server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTesting-HTTP-Server.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTesting-HTTP-Server/Pods-iOSTesting-HTTP-Server.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,9 +107,8 @@
 		C84D749F1A6FC7B100CF71C8 /* iOSTesting-HTTP-Server */ = {
 			isa = PBXGroup;
 			children = (
-				C84D74A01A6FC7B100CF71C8 /* LocalWebServer.h */,
-				C84D74A21A6FC7B100CF71C8 /* LocalWebServer.m */,
-				C88AC5DC1A7114B0007179E8 /* iOSTesting-HTTP-Server.h */,
+				C88AC5DD1A716550007179E8 /* iOSTestingHTTPServer.h */,
+				C88AC5DE1A716550007179E8 /* iOSTestingHTTPServer.m */,
 			);
 			path = "iOSTesting-HTTP-Server";
 			sourceTree = "<group>";
@@ -256,7 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C84D74A31A6FC7B100CF71C8 /* LocalWebServer.m in Sources */,
+				C88AC5DF1A716550007179E8 /* iOSTestingHTTPServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

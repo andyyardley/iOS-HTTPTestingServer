@@ -9,18 +9,17 @@ xcodeproj 'iOSTesting-HTTP-Server.xcodeproj'
 
 
 target 'iOSTesting-HTTP-Server' do
-
-pod "GCDWebServer", "~> 3.0"
-xcodeproj 'iOSTesting-HTTP-Server.xcodeproj'
+    
+    pod "GCDWebServer", "~> 3.0"
+    xcodeproj 'iOSTesting-HTTP-Server.xcodeproj'
 end
 
 xcodeproj 'DemoApp/DemoApp.xcodeproj'
 
 target 'DemoApp' do
-
-pod "GCDWebServer", "~> 3.0"
-pod "iOSTesting-HTTP-Server", :local => '.'
-
-xcodeproj 'DemoApp/DemoApp.xcodeproj'
-
+    
+    pod "iOSTesting-HTTP-Server", :local => '.'
+    
+    xcodeproj 'DemoApp/DemoApp.xcodeproj'
+    
 end
