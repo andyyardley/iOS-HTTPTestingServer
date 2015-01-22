@@ -353,7 +353,7 @@
 			baseConfigurationReference = B5557D0265CAEAB0D517E653 /* Pods-iOSTesting-HTTP-Server.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -364,7 +364,7 @@
 			baseConfigurationReference = F3C5583E13775C19E1758741 /* Pods-iOSTesting-HTTP-Server.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
