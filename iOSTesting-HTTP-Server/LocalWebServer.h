@@ -7,9 +7,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, PostArguments) {
+    MethodName = 0,
+    Argument1,
+    Argument2
+};
+
 @interface LocalWebServer : NSObject
 
 + (instancetype) sharedInstance;
 + (void) startLocalWebServer;
++ (NSURL *) localWebServerURL;
 
 @end

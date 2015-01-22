@@ -6,7 +6,7 @@
 //
 
 #import "LocalWebServer.h"
-
+#import <UIKit/UIKit.h>
 #import "GCDWebServer.h"
 #import "GCDWebServerURLEncodedFormRequest.h"
 
@@ -46,11 +46,11 @@
 - (void) startWebServer
 {
     [self addPOSTHandler];
+    [self.webServer startWithPort:8080 bonjourName:nil];
 }
 
 - (void) addPOSTHandler
 {
-    
     __weak typeof(self) weakSelf = self;
     [self.webServer addHandlerForMethod:@"POST"
                                    path:@"/"
@@ -60,18 +60,34 @@
          __strong typeof(weakSelf) strongSelf = weakSelf;
          if(strongSelf)
          {
-             NSString* postArguments = [[(GCDWebServerURLEncodedFormRequest*)request arguments] objectForKey:@"value"];
+             NSDictionary* postArguments = [(GCDWebServerURLEncodedFormRequest*)request arguments];
              
              [strongSelf processPost:postArguments];
-             
              
          }
          return nil;
      }];
 }
 
-- (void) processPost:(NSString *) postArguments
+- (void) processPost:(NSDictionary *) postArguments
 {
     NSLog(@"Post %@", postArguments);
+    if([[postArguments valueForKey:@"method"] isKindOfClass:[NSString class]])
+    {
+        NSString *methodName = [postArguments valueForKey:@"method"];
+        SEL methodSelector = NSSelectorFromString(methodName);
+        
+        if([[UIApplication sharedApplication].delegate respondsToSelector:methodSelector])
+        {
+            [[UIApplication sharedApplication].delegate performSelector:methodSelector withObject:postArguments];
+        }
+    }
 }
+
++ (NSURL *) localWebServerURL
+{
+    return [LocalWebServer sharedInstance].webServer.serverURL;
+    
+}
+
 @end

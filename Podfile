@@ -19,6 +19,8 @@ xcodeproj 'DemoApp/DemoApp.xcodeproj'
 target 'DemoApp' do
 
 pod "GCDWebServer", "~> 3.0"
+pod "iOSTesting-HTTP-Server", :local => '.'
+
 xcodeproj 'DemoApp/DemoApp.xcodeproj'
 
 end

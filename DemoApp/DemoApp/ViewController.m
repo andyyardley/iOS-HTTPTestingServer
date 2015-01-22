@@ -8,15 +8,18 @@
 
 #import "ViewController.h"
 
-//#import "LocalWebServer.h"
+#import "iOSTesting-HTTP-Server.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *methodName;
-@property (strong, nonatomic) IBOutlet UITextField *argument;
-@property (strong, nonatomic) IBOutlet UITextField *argument2;
-@property (strong, nonatomic) IBOutlet UITextField *argument3;
+@property (strong, nonatomic) IBOutlet UITextField *argumentName;
+@property (strong, nonatomic) IBOutlet UITextField *argumentValue;
+@property (strong, nonatomic) IBOutlet UITextField *argument2Name;
+@property (strong, nonatomic) IBOutlet UITextField *argument2Value;
 @property (strong, nonatomic) IBOutlet UIButton *go;
+
+@property (strong, nonatomic) NSURLConnection *connection;
 
 @end
 
@@ -25,8 +28,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    [LocalWebServer startWebServer];
-    self.go.enabled = NO;
+    self.methodName.delegate = self;
+    self.argumentName.delegate = self;
+    self.argumentValue.delegate = self;
+    self.argument2Name.delegate = self;
+    self.argument2Value.delegate = self;
+
+    self.go.enabled = (self.methodName.text.length > 0) ? YES : NO;
+    
+    [LocalWebServer startLocalWebServer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +45,16 @@
 }
 
 #pragma mark - UITextFieldDelegate
+
+- (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == self.methodName)
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        self.go.enabled = (newLength > 0) ? YES : NO;
+    }
+    return YES;
+}
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
@@ -54,13 +74,11 @@
 
 - (IBAction)go:(UIButton *)sender
 {
-    NSURL *aUrl = [NSURL URLWithString:@"http://127.0.0.1:8080"];
+    NSURL *aUrl = [LocalWebServer localWebServerURL];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:aUrl
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
     
-    NSURLConnection *connection= [[NSURLConnection alloc] initWithRequest:request
-                                                                 delegate:self];
     
     [request setHTTPMethod:@"POST"];
     NSString *postString = @"";
@@ -68,9 +86,29 @@
     {
         postString = [postString stringByAppendingString:[NSString stringWithFormat:@"method=%@", self.methodName.text]];
     }
+    if(([self.argumentName.text isEqualToString:@""] == NO) && ([self.argumentValue.text isEqualToString:@""] == NO))
+    {
+        if(postString.length > 0)
+        {
+            postString = [postString stringByAppendingString:@"&"];
+        }
+        postString = [postString stringByAppendingString:[NSString stringWithFormat:@"%@=%@", self.argumentName.text, self.argumentValue.text]];
+    }
+    
+    if(([self.argument2Name.text isEqualToString:@""] == NO) && ([self.argument2Value.text isEqualToString:@""] == NO))
+    {
+        if(postString.length > 0)
+        {
+            postString = [postString stringByAppendingString:@"&"];
+        }
+        postString = [postString stringByAppendingString:[NSString stringWithFormat:@"%@=%@", self.argument2Name.text, self.argument2Value.text]];
+    }
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
-    [connection start];
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSLog(@"responseData: %@", responseData);
 }
 
 

@@ -42,4 +42,17 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void) alertViewWithArguments:(NSDictionary *) arguments
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        NSString *title = [arguments valueForKey:@"title"];
+        NSString *message = [arguments valueForKey:@"message"];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        
+        [alert show];
+    });
+}
+
 @end
