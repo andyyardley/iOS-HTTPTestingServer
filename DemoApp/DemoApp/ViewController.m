@@ -34,7 +34,7 @@
     self.argument2Name.delegate = self;
     self.argument2Value.delegate = self;
 
-    self.go.enabled = (self.methodName.text.length > 0) ? YES : NO;
+    self.go.enabled = (self.methodName.text.length > 0);
     
     [iOSTestingHTTPServer startLocalWebServer];
 }
@@ -51,7 +51,7 @@
     if (textField == self.methodName)
     {
         NSUInteger newLength = [textField.text length] + [string length] - range.length;
-        self.go.enabled = (newLength > 0) ? YES : NO;
+        self.go.enabled = (newLength > 0);
     }
     return YES;
 }
