@@ -81,7 +81,9 @@
         {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            [[UIApplication sharedApplication].delegate performSelector:methodSelector withObject:postArguments];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication].delegate performSelector:methodSelector withObject:postArguments];
+            });
 #pragma clang diagnostic pop
         }
     }
