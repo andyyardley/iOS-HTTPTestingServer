@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GCDWebServer.h"
 #import "GCDWebServerURLEncodedFormRequest.h"
+#import "GCDWebServerDataResponse.h"
 
 @interface iOSTestingHTTPServer()
 
@@ -58,18 +59,25 @@
                            processBlock:^GCDWebServerResponse *(GCDWebServerRequest* request)
      {
          __strong typeof(weakSelf) strongSelf = weakSelf;
+         
+         BOOL success = NO;
+         
          if(strongSelf)
          {
              NSDictionary* postArguments = [(GCDWebServerURLEncodedFormRequest*)request arguments];
              
-             [strongSelf processPost:postArguments];
+             success = [strongSelf processPost:postArguments];
              
          }
-         return nil;
+         
+         // Return status code:
+         // 200 - if method on app delegate was called successfuly
+         // 404 - if no method found with given name on app delegate
+         return [GCDWebServerDataResponse responseWithStatusCode:(success) ? 200 : 404];
      }];
 }
 
-- (void) processPost:(NSDictionary *) postArguments
+- (BOOL) processPost:(NSDictionary *) postArguments
 {
     NSLog(@"Post %@", postArguments);
     if([[postArguments valueForKey:@"method"] isKindOfClass:[NSString class]])
@@ -85,8 +93,11 @@
                 [[UIApplication sharedApplication].delegate performSelector:methodSelector withObject:postArguments];
             });
 #pragma clang diagnostic pop
+            return YES;
         }
     }
+    
+    return NO;
 }
 
 + (NSURL *) localWebServerURL
