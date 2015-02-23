@@ -3,7 +3,7 @@
 //  DemoApp
 //
 //  Created by Benjamin Whiting on 22/01/2015.
-//  Copyright (c) 2015 VocaLink Holdings Limited. All rights reserved.
+//  Copyright (c) 2015. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -25,9 +25,10 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
     self.methodName.delegate = self;
     self.argumentName.delegate = self;
     self.argumentValue.delegate = self;
@@ -39,9 +40,9 @@
     [iOSTestingHTTPServer startLocalWebServer];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - UITextFieldDelegate
@@ -80,8 +81,6 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:webServerURL
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
-    
-    
     [request setHTTPMethod:@"POST"];
     NSString *postString = @"";
     if([self.methodName.text isEqualToString:@""] == NO)
@@ -112,6 +111,5 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
     NSLog(@"responseData: %@", responseData);
 }
-
 
 @end
